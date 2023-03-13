@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.{js,jsx}"],
+	content: [
+		"./app/**/*.{js,ts,jsx,tsx}",
+		"./styles/**/*.{js,ts,jsx,tsx}",
+		"./pages/**/*.{js,ts,jsx,tsx}",
+		"./components/**/*.{js,ts,jsx,tsx}",
+	],
 	mode: "jit",
 	theme: {
 		extend: {
@@ -19,7 +24,7 @@ module.exports = {
 				xs: "450px",
 			},
 			backgroundImage: {
-				"hero-pattern": "url('/src/assets/herobg.png')",
+				"hero-pattern": "url('/imgs/herobg.png')",
 			},
 		},
 	},

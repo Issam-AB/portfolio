@@ -1,18 +1,27 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Experience from "../components/Experience";
+import Feedback from "../components/Feedback";
+import Tech from "../components/Tech";
+import Work from "../components/Work";
 
 const Home: NextPage = () => {
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center py-2">
+		<>
 			<Head>
-				<title>Create Next App</title>
-				<link rel="icon" href="/favicon.ico" />
+				<title>Issam | Portfolio</title>
+				<link rel="icon" href="/logo.svg" />
 			</Head>
 
-			<main className="">
-				<h1 className="text-red-600 underline">hellow world</h1>
-			</main>
-		</div>
+			<About />
+			<Experience />
+			<Tech />
+			<Work />
+			<Feedback />
+			<Contact />
+		</>
 	);
 };
 
