@@ -69,4 +69,4 @@ const About: React.FC = () => {
   );
 };
 
-export default SectionWrapper({ Component: About, idName: "About" });
+export default () => <SectionWrapper Component={About} idName="About" />;
