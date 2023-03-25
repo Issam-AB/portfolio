@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion, spring } from "framer-motion";
 
 import { styles } from "../styles";
@@ -15,11 +15,14 @@ const ServiceCard: React.FC<{
 }> = ({ index, title, icon }) => (
 	<Tilt
 		className="xs:w-[250px] w-full"
-		options={{
-			max: 45,
-			scale: 1,
-			speed: 450,
-		}}
+		// options={{
+		// 	max: 45,
+		// 	scale: 1,
+		// 	speed: 450,
+		// }}
+		perspective={500}
+		scale={1}
+		transitionSpeed={450}
 	>
 		<motion.div
 			variants={fadeIn("right", "spring", 0.5 * index, 0.75)}

@@ -16,7 +16,11 @@ const Contact: React.FC = () => {
 	});
 	const [loading, setLoading] = useState(false);
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (
+		e:
+			| React.ChangeEvent<HTMLInputElement>
+			| React.ChangeEvent<HTMLTextAreaElement>
+	) => {
 		const { name, value } = e.target;
 		setForm({ ...form, [name]: value });
 	};
