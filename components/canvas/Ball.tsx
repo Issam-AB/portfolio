@@ -5,18 +5,17 @@ import {
 	Float,
 	OrbitControls,
 	Preload,
-	FloatProps,
 	useTexture,
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 import { StaticImageData } from "next/image";
 
-const Ball: React.FC<FloatProps> = ({ imgUrl, ...props }) => {
-	const [decal] = useTexture([imgUrl]);
+const Ball = (props: any) => {
+	const [decal] = useTexture([props.imgUrl]);
 
 	return (
-		<Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+		<Float {...props} speed={1.75} rotationIntensity={1} floatIntensity={2}>
 			<ambientLight intensity={0.25} />
 			<directionalLight position={[0, 0, 0.05]} />
 			<mesh castShadow receiveShadow scale={2.75}>
