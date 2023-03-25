@@ -10,7 +10,7 @@
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.7",
     "framer-motion": "^10.3.1",
-    "maath": "^0.5.2",
+    "maath": "^0.5.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",

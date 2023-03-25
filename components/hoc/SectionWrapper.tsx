@@ -11,6 +11,7 @@ type Props = {
 const SectionWrapper: React.FC<Props> = ({ Component, idName }) => {
 	const Hoc: React.FC = () => (
 		<motion.div
+			id={idName}
 			variants={staggerContainer()}
 			initial="hidden"
 			whileInView="show"

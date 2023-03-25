@@ -102,4 +102,4 @@ const Work: React.FC = () => {
 	);
 };
 
-export default () => <SectionWrapper Component={Work} idName="" />;
+export default () => <SectionWrapper Component={Work} idName="work" />;
