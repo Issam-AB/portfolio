@@ -9,6 +9,12 @@ const Navbar = () => {
 	const [active, setActive] = useState("");
 	const [toggle, setToggle] = useState(false);
 
+	const handleLink = (id: string): void => {
+		let elem = document.getElementById(id);
+		if (elem) {
+			elem.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 	return (
 		<nav
 			className={`${styles.paddingX} w-full flex items-center py-5 fixed z-20 bg-primary`}
@@ -35,9 +41,13 @@ const Navbar = () => {
 							className={`${
 								active === nav.title ? "text-white" : "text-secondary"
 							} hover:text-white text-[18px] font-medium cursor-pointer`}
-							onClick={() => setActive(nav.title)}
+							onClick={() => {
+								setActive(nav.title);
+								handleLink(nav.id);
+							}}
 						>
-							<Link href={`#${nav.id}`}>{nav.title}</Link>
+							{/* <Link href={`#${nav.id}`}>{nav.title}</Link> */}
+							<span>{nav.title}</span>
 						</li>
 					))}
 				</ul>
