@@ -20,7 +20,7 @@ const Navbar = () => {
 			className={`${styles.paddingX} w-full flex items-center py-5 fixed z-20 bg-primary`}
 		>
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-				<Link
+				<a
 					href={"/"}
 					className="flex items-center gap-2"
 					onClick={() => {
@@ -33,7 +33,7 @@ const Navbar = () => {
 						ABOULFADL &nbsp;
 						<span className="sm:block hidden">| Issam</span>
 					</p>
-				</Link>
+				</a>
 				<ul className="list-none hidden sm:flex flex-row gap-10">
 					{navLinks.map((nav) => (
 						<li
